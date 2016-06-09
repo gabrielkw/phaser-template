@@ -1,11 +1,26 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang=en-us>
 <head>
-    <meta charset="utf-8" />
-    <title>Phaser Template</title>
+    <meta charset=utf-8>
+    <title>phaser project</title>
+    <style type="text/css">
+        #gameDiv{
+            width:800px;
+            margin:0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Phaser template</h1>
-	<div id = "gameDiv"></div>
+    <div id="gameDiv">
+    </div>
+    <script src="src/phaser.js"></script>
+    <script src="src/boot.js"></script>
+    <script src="src/preloader.js"></script>
+    <script src="src/mainstate.js"></script>
+    <script>
+        game.state.add('boot', boot, true);
+        game.state.add('preloader', preloader, false);
+        game.state.add('mainstate', mainState, false);
+    </script>
 </body>
 </html>
