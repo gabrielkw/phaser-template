@@ -1,11 +1,12 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameDiv');
 
+var i;
+
 // Objects
 var player;
 
 // Map content
 var map;
-var layer;
 
 // Inputs
 var buttons;
@@ -13,7 +14,6 @@ var buttons;
 // Physics groups
 var walls;
 var solids;
-var slimes;
 
 // Load lists
 var tilesets;

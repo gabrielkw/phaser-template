@@ -15,12 +15,13 @@
     </div>
     <script src="src/phaser.js"></script>
     <script src="src/boot.js"></script>
+    <script src="src/objects.js"></script>
     <script src="src/preloader.js"></script>
     <script src="src/mainstate.js"></script>
     <script>
         game.state.add('boot', boot, true);
-        game.state.add('preloader', preloader, false);
-        game.state.add('mainstate', mainState, false);
+        game.state.add('preloader', preloader);
+        game.state.add('mainstate', mainState);
     </script>
 </body>
 </html>

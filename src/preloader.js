@@ -6,13 +6,13 @@ var preloader = {
         tilesets = ['basepack', 'buildingspack', 'candypack', 'extrapack', 'icepack'];
         sprites = ['player', 'slimeBlock'];
 
-        for (let i = 0; i < maps.length; i++) {
+        for (i = 0; i < maps.length; i++) {
             game.load.tilemap(maps[i], 'data/maps/' + maps[i] + '.json', null, Phaser.Tilemap.TILED_JSON);
         }
-        for (let i = 0; i < sprites.length; i++) {
+        for (i = 0; i < sprites.length; i++) {
             game.load.image(sprites[i], 'data/graphics/sprites/' + sprites[i] + '.png');
         }
-        for (let i = 0; i < tilesets.length; i++) {
+        for (i = 0; i < tilesets.length; i++) {
             game.load.image(tilesets[i], 'data/graphics/tilesets/' + tilesets[i] + '.png');
         }
     },
