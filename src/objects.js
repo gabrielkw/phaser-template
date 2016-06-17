@@ -1,6 +1,6 @@
 function Player(x, y){
     var player = solids.create(x, y, 'player');
-    player.body.gravity.y = 1024;
+    player.body.gravity.y = 2048;
     game.camera.follow(player);
     
     player.update = function(){
@@ -21,7 +21,7 @@ function Player(x, y){
                 player.body.drag.x = 4096;
             }
             if (buttons.up.isDown) {
-                player.body.velocity.y = -768;
+                player.body.velocity.y = -896;
             }
         } else {
             //Controls on air
@@ -35,6 +35,7 @@ function Player(x, y){
 
         // Speed cap
         player.body.velocity.x = Math.min(Math.max(player.body.velocity.x, -386), 386);
+        player.body.y = Math.round(player.body.y);
         
     }
     return player;

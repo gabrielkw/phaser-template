@@ -6,6 +6,8 @@ var mainState = {
         }
         
         map.createLayer('tile_layer').resizeWorld();
+        
+        game.stage.setBackgroundColor('#333');
 
         buttons = game.input.keyboard.createCursorKeys();
 
@@ -39,7 +41,7 @@ var mainState = {
         game.physics.arcade.collide(solids, walls);
         game.physics.arcade.collide(solids, solids);
         solids.forEach(function(item){
-            item.body.y = Math.round(item.body.y);
+            item.update();
         }, this);
     },
     
